@@ -49,8 +49,8 @@
 </body>
 </html>
 <link rel="stylesheet" href="style.css">
-<section id="cv-lebenslauf" style="max-width: 800px; margin: auto; padding: 20px; font-family: Arial, sans-serif;">
-    <h2 style="text-align: center;">Lebenslauf & CV</h2>
+<section id="cv-lebenslauf">
+    <h2>Lebenslauf & CV</h2>
     
     <h3>Persönliche Daten</h3>
     <ul>
@@ -104,13 +104,24 @@
         margin: auto;
         padding: 20px;
         font-family: Arial, sans-serif;
+        background: rgba(255, 255, 255, 0.8); /* Полутранспарентна позадина */
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Малку појасна сенка за контраст */
+    }
+    h2 {
+        text-align: center;
+        color: #d00000;
+    }
+    h3 {
+        color: #d00000;
     }
     ul {
         padding-left: 20px;
     }
     @media (max-width: 600px) {
         #cv-lebenslauf {
-            padding: 10px;
+            padding: 15px;
         }
         h2, h3 {
             text-align: center;
@@ -120,3 +131,4 @@
         }
     }
 </style>
+
