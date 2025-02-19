@@ -15,35 +15,28 @@ body {
 }
 
 .container {
-  text-align: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.flag {
-  width: 100%;
-  height: 50px;
-  background-color: red;
-  animation: drop 2s ease-in-out forwards, flagRotation 3s infinite alternate;
-  transform-origin: top center;
-  transform: rotateX(-90deg);
+.logo {
+    position: absolute;
+    top: 10%;
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes drop {
-  0% {
-    transform: translateY(-100%) rotateX(-90deg);
-  }
-  100% {
-    transform: translateY(0) rotateX(0deg);
-  }
+.profile-pic {
+    width: 300px; /* прилагоди ја големината */
+    height: auto;
+    margin-top: 80px; /* за да се намести правилно под 3M */
 }
 
-@keyframes flagRotation {
-  0% {
-    transform: rotateX(-90deg);
-  }
-  100% {
-    transform: rotateX(0deg);
-  }
-}
 
 .logo {
   font-size: 70px;
