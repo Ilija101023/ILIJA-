@@ -101,34 +101,48 @@
 <style>
     #cv-lebenslauf {
         max-width: 800px;
-        margin: auto;
-        padding: 20px;
+        margin: 20px auto;
+        padding: 25px;
         font-family: Arial, sans-serif;
-        background: rgba(255, 255, 255, 0.8); /* Полутранспарентна позадина */
+        background: rgba(255, 255, 255, 0.85); /* Полутранспарентна позадина за подобра читливост */
         color: #333;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Малку појасна сенка за контраст */
+        border-radius: 12px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.6;
     }
     h2 {
         text-align: center;
         color: #d00000;
+        font-size: 28px;
+        margin-bottom: 15px;
     }
     h3 {
         color: #d00000;
+        font-size: 22px;
+        margin-top: 20px;
     }
     ul {
-        padding-left: 20px;
+        padding-left: 25px;
     }
-    @media (max-width: 600px) {
+    ul li {
+        margin-bottom: 8px;
+    }
+    
+    @media (max-width: 768px) {
         #cv-lebenslauf {
             padding: 15px;
+            max-width: 90%;
         }
-        h2, h3 {
-            text-align: center;
+        h2 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 20px;
         }
         ul {
-            padding-left: 10px;
+            padding-left: 15px;
         }
     }
 </style>
 
+    
