@@ -1,39 +1,39 @@
-
-/* ПОЗАДИНА СО ВИСОКА РЕЗОЛУЦИЈА */
 body {
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
-    text-align: center;
+    background: url('background.jpg') no-repeat center center/cover;
 }
 
-/* 3D ЛОГО "3M" ВО ЦЕНТАР */
+.container {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
 .logo {
-    font-size: 120px;
-    font-weight: 900;
+    font-size: 100px;
+    font-weight: bold;
     color: red;
-    text-shadow: 
-        3px 3px 0px black, 
-        6px 6px 5px rgba(0, 0, 0, 0.5);
-    animation: pulse 1.5s infinite alternate;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* АНМИАЦИЈА НА ЛОГО */
-@keyframes pulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-}
-
-/* ТЕКСТ "Ilija Grnev" ПОД ЛОГОТО */
 .name {
     font-size: 40px;
     font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: perspective(500px) rotateY(-15deg);
 }
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 70px;
+    }
+    .name {
+        font-size: 30px;
+    }
+}
+
