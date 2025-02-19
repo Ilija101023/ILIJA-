@@ -1,29 +1,22 @@
-/* ПОЗАДИНА */
+/* ПОЗАДИНА - ФУЛ ХД ЗА PC И МОБИЛЕН */
 body {
-    background: black; /* Темна позадина за контраст */
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     overflow: hidden; /* Без скролбар */
 }
 
-/* ЛОГОТО 3M СО 3D ЕФЕКТ */
+/* ЛОГОТО "3M" ВО ДЕСНИОТ АГОЛ */
 .logo {
     position: fixed;
     top: 20px;
     right: 20px;
-    font-size: 120px;
+    font-size: 100px;
     font-weight: 900;
     color: red;
-    text-shadow: 5px 5px 0px #8b0000, 10px 10px 20px rgba(255, 0, 0, 0.8);
-    transform: rotateX(20deg) rotateY(20deg);
-    animation: logoAnimation 3s infinite alternate ease-in-out;
-}
-
-/* АНИМАЦИЈА НА ЛОГОТО */
-@keyframes logoAnimation {
-    0% { transform: rotateX(20deg) rotateY(20deg) scale(1); }
-    100% { transform: rotateX(-20deg) rotateY(-20deg) scale(1.1); }
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 /* ТЕКСТ "Ilija Grnev" ВО ЛЕВИОТ АГОЛ */
@@ -33,7 +26,7 @@ body {
     left: 20px;
     font-size: 30px;
     font-weight: bold;
-    color: cyan; /* Светло сина боја */
+    color: cyan;
     text-shadow: 3px 3px 10px rgba(0, 255, 255, 0.8);
 }
 
