@@ -1,27 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ПОЗАДИНА */
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1500px; /* 3D перспектива */
+    background: black; /* Темна позадина за контраст */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden; /* Да не се појавува скролбар */
 }
 
-.container {
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* ЛОГОТО ВО ДЕСНИОТ АГОЛ */
 .logo {
     position: fixed;
     top: 10px;
@@ -31,7 +17,7 @@ body {
     background: linear-gradient(45deg, red, darkred);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 5px 5px 20px rgba(255, 0, 0, 0.6);
+    text-shadow: 5px 5px 20px rgba(255, 0, 0, 0.8);
     animation: pulse 2s infinite alternate;
 }
 
@@ -39,50 +25,40 @@ body {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
 }
-@keyframes pulse {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
+
+/* ТЕКСТ ВО ЛЕВИОТ АГОЛ */
+.name {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: cyan; /* Светло сина боја за контраст */
+    text-shadow: 3px 3px 10px rgba(0, 255, 255, 0.8);
 }
 
-.profile-pic {
-    width: 300px; /* прилагоди ја големината */
-    height: auto;
-    margin-top: 80px; /* за да се намести правилно под 3M */
+/* АНИМАЦИЈА НА ПАЃАЧКИ "3M" */
+@keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
 
-
-.logo {
-  font-size: 70px;
-  color: red;
-  font-weight: bold;
-  margin-top: 20px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  animation: logoAnimation 2s ease-in-out infinite alternate;
-}
-
-h1 {
-  font-size: 38px;
-  margin-top: 30px;
-  animation: textFade 3s ease-in-out infinite alternate;
-}
-
-@keyframes logoAnimation {
-  0% {
-    transform: scale(1);
+.snowflake {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
     color: red;
-  }
-  100% {
-    transform: scale(1.1);
-    color: darkred;
-  }
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
 
-@keyframes textFade {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/* РАНДОМ ПОЗИЦИИ И ГОЛЕМИНИ */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 4s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 6s; animation-delay: 1s; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 5s; animation-delay: 2s; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 7s; animation-delay: 3s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 6s; animation-delay: 4s; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 4s; animation-delay: 5s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 5s; animation-delay: 6s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 7s; animation-delay: 7s; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 6s; animation-delay: 8s; }
