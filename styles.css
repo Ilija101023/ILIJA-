@@ -24,11 +24,20 @@ body {
 
 .logo {
     position: absolute;
-    top: 10%;
-    font-size: 60px;
-    font-weight: bold;
-    color: red;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    top: 20px;
+    right: 30px;
+    font-size: 100px;
+    font-weight: 900;
+    background: linear-gradient(45deg, red, darkred);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 20px rgba(255, 0, 0, 0.6);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }
 
 .profile-pic {
