@@ -15,18 +15,31 @@
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            text-align: center;
         }
 
         .logo {
-            font-size: 100px;
-            font-weight: bold;
+            font-size: 120px; /* Уште поголемо и подебело */
+            font-weight: 900; /* Екстра дебели букви */
             color: red;
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
             animation: pulse 2s infinite alternate;
+            margin-top: 50px; /* Малку одвоено од URL-то */
+        }
+
+        .url {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         @keyframes pulse {
@@ -37,6 +50,7 @@
 </head>
 <body>
 
+    <div class="url">https://ilija101023.github.io/ILIJA-/</div>
     <div class="logo">3M</div>
 
 </body>
