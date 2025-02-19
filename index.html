@@ -1,19 +1,51 @@
-
 <!DOCTYPE html>
-<html lang="mk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilija Grnev</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ilija Grnev - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center/cover;
+        }
+        .container {
+            position: relative;
+            text-align: left;
+            color: white;
+        }
+        .logo {
+            font-size: 100px;
+            font-weight: bold;
+            color: red;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        .name {
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            transform: perspective(500px) rotateY(-15deg);
+        }
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 70px;
+            }
+            .name {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- 3D ЛОГО "3M" -->
-    <div class="logo">3M</div>
-
-    <!-- ТЕКСТ "Ilija Grnev" -->
-    <div class="name">Ilija Grnev</div>
-
+    <div class="container">
+        <div class="logo">3M</div>
+        <div class="name">Ilija Grnev</div>
+    </div>
 </body>
 </html>
+
